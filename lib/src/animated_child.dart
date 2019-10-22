@@ -5,7 +5,6 @@ class AnimatedChild extends AnimatedWidget {
   final Color backgroundColor;
   final Color foregroundColor;
   final double elevation;
-  final double buttonSize;
   final Widget child;
   final String label;
   final TextStyle labelStyle;
@@ -24,7 +23,6 @@ class AnimatedChild extends AnimatedWidget {
     this.backgroundColor,
     this.foregroundColor,
     this.elevation = 6.0,
-    this.buttonSize = 62,
     this.child,
     this.label,
     this.labelStyle,
@@ -96,11 +94,11 @@ class AnimatedChild extends AnimatedWidget {
         children: <Widget>[
           buildLabel(),
           Container(
-            width: buttonSize,
+            width: 62.0,
             height: animation.value,
-            padding: EdgeInsets.only(bottom: buttonSize - animation.value),
+            padding: EdgeInsets.only(bottom: 62.0 - animation.value),
             child: Container(
-              height: buttonSize,
+              height: 62.0,
               width: animation.value,
               padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: FloatingActionButton(
